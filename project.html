@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+Österreich:wght@100..400&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Flipdesk</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Playwrite Österreich';
+  background-color: #f3f3f3;
+}
+
+
+    
+.navbar {
+  background-color: #131921;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 40px;
+  font-family: 'Playwrite Österreich', cursive;
+  color: #ff9900;
+}
+
+.logo:hover {
+  border: 1px solid;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.location{
+  font-size: 18px;
+  font-weight: bold;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.location:hover {
+  border: 1px solid;
+  color: whitesmoke;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;      
+  padding: 0px;
+  border-radius: 6px;
+  width: 300px;
+  color:#ccc;
+}
+
+.search-box img {
+  width: 30px;
+  height: 25px;
+  margin-right: 0px;
+  padding-left:0px;
+  object-fit: contain;
+}
+
+.search-box input {
+  padding: 6px;
+  width: 255px;
+  border: none;
+  border-radius: 3px;
+}
+.account:hover {
+  border: 1px solid;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.cart {
+  background-color: #ff9900;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.cart:hover {
+  cursor: pointer;
+}
+
+    .categories {
+      background-color: white;
+      padding: 10px 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .categories span {
+      cursor: pointer;
+      font-weight: bold;
+
+    }
+
+.categories span:hover {
+  color: #ff9900;
+}
+
+    
+    .container {
+      padding: 20px;
+    
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+      
+    }
+
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 25px;
+      font-weight: bold;
+    
+    }
+
+    .card button {
+      background-color: #ff9900;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+.featured-products .card:hover {
+  background-color: #f8f8f8;
+}
+
+.featured-products{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+.other-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.other-products .card:hover {
+  background-color: #f8f8f8;
+}
+
+
+.footer {
+  background-color: #232f3e;
+  font-family: sans-serif, Ariel;
+  padding: 40px 20px;
+  color: white;
+}
+
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  display: block;
+  color: #dddddd;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+
+.footer-column a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">Flipdesk</div>
+  <div class="location">
+    <img src="https://media.istockphoto.com/id/1193451471/vector/map-pin-vector-glyph-icon.jpg?s=612x612&w=0&k=20&c=wuWVeHuthNAXzjOO5_VY9SUOd-6cxwpVH8VVfh6Y7Lc=" alt="Location Icon" style="width: 16px; vertical-align: middle; margin-left: 5px;"> Deliver to: India
+  </div>
+  <div class="search-box">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/020/120/837/small/search-icon-simple-style-web-searching-background-symbol-search-brand-logo-design-element-search-t-shirt-printing-for-sticker-free-vector.jpg" alt="Search Icon" style="width: 16px; vertical-align: middle; margin-right: 5px;">
+    <input type="text" placeholder="Search products">
+  </div>
+  <div class="account" style="color: #d4d4d4; font-size: 18px;">Your account</div>
+  <div class="cart">Cart: 0</div>
+</div>
+
+<div class="categories">
+  <span>Mobiles</span>
+  <span>Electronics</span>
+  <span>Fashion</span>
+  <span>Groceries</span>
+  <span>Gifts</span>
+  <span>Sports</span>
+  <span>Buy again</span>
+  <span>Sell</span>
+</div>
+
+<div class="featured-products">
+  <h1>Featured Products</h1>
+  <div class="products">
+<div class="card">
+  <img src="https://opsg-img-cdn-gl.heytapimg.com/epb/202601/27/PDaU6DkS6uh3vAt8.png" alt="Product"><h3>Smartphone</h3>
+  <p>₹34,999</p>
+  <button>Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="https://media.istockphoto.com/id/1412240771/photo/headphones-on-white-background.jpg?s=612x612&w=0&k=20&c=DwpnlOcMzclX8zJDKOMSqcXdc1E7gyGYgfX5Xr753aQ=" alt="Product">
+  <h3>Headphones</h3>
+  <p>₹2,499</p>
+  <button>Add to Cart</button>
+  </div>
+
+<div class="card">
+  <img src="https://icon.in/cdn/shop/files/1_50b8664b-0c2b-477a-9d86-ed6fce060859.jpg?v=1756985540" alt="Product">
+  <h3>Backpack</h3>
+  <p>₹1,499</p>
+  <button>Add to Cart</button>
+  </div>
+
+<div class="card">
+  <img src="https://media.istockphoto.com/id/1180244659/photo/luxury-watch-isolated-on-white-background-with-clipping-path-for-artwork-or-design-black.jpg?s=612x612&w=0&k=20&c=yeFNfkQmcVV9BTUlZO8vY_oLOQgDAt23LfCbF1e3fbI=" alt="Product">
+  <h3>Wrist Watch</h3>
+  <p>₹4,999</p>
+  <button>Add to Cart</button>
+  </div>
+
+</div>
+</div>
+<h2 style="margin-left: 20px; margin-right: 20px; margin-top: 50px;">Shop For More</h2>
+  <div class="other-products">
+
+
+<div class="card">
+      <img src="https://rukminim2.flixcart.com/fk-p-ads/824/366/dp-doc/1768559618288-cmkgqqf3k9jwc0u3jhijpzl9q-17f861c159857d28c21b160e17582f4a2e30240d4b66e700323a50d2306a57d8.jpg?q=90">
+      <h4>Sports Shoes</h4>
+      <p>₹7,199</p>
+      <button>Add to Cart</button>
+    </div>
+
+<div class="card">
+  <img src="https://i.etsystatic.com/18628324/r/il/73e474/3694077423/il_1080xN.3694077423_klj6.jpg" style="height:70%; width: 50%;">
+  <h4>T-shirt</h4>
+  <p>₹799</p>
+  <button>Add to Cart</button>
+</div>
+
+    <div class="card">
+      <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Surface-Laptop-Go-3_OG_Twitter-image?scl=1">
+      <h4>Laptop</h4>
+      <p>₹45,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://5.imimg.com/data5/HU/ZR/EO/SELLER-29248935/smart-refrigerator-500x500.jpg" style="height:70%; width: 50%;">
+      <h4>Smart Refrigerator</h4>
+      <p>₹33,499</p>
+      <button>Add to Cart</button>
+    </div>
+
+<div class="card">
+  <img src="https://www.rasoishop.com/cdn/shop/files/8901365419587-8.jpg?v=1690612080" style="height:70%; width: 50%;">
+  <h4>Induction</h4>
+  <p>₹4,799</p>
+  <button>Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="https://cdnmedia.dsc-cricket.com/media/catalog/product/cache/5b0ea239e50527b43e3253a7f103e237/d/s/dsc-blak-111-supreme-english-willow-india-range-cricket-bat-2.webp" style="height:70%; width: 50%;">
+  <h4>Cricket Bat</h4>
+  <p>₹2,799</p>
+  <button>Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-column">
+      <h3>Get to Know Us</h3>
+      <a href="#">About Flipdesk</a>
+      <a href="#">Careers</a>
+      <a href="#">Press Releases</a>
+      <a href="#">Flipdesk Science</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Connect with Us</h3>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Make Money with Us</h3>
+      <a href="#">Sell on Flipdesk</a>
+      <a href="#">Become an Affiliate</a>
+      <a href="#">Advertise Your Products</a>
+      <a href="#">Fulfilment by Flipdesk</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Let Us Help You</h3>
+      <a href="#">Your Account</a>
+      <a href="#">Returns Centre</a>
+      <a href="#">100% Purchase Protection</a>
+      <a href="#">Help</a>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
